@@ -26,4 +26,26 @@ public class MuroTest {
         System.out.println(muro);
     }
 
+    @Test
+    public void test02() {
+
+        Muro muro = new Muro();
+
+        EntradaTexto entrada01 = new EntradaTexto("Nacho", "Recien llegado de mis vacaciones en Hawaii!");
+        EntradaFoto entrada02 = new EntradaFoto("Luis", "https://bit.ly/2W1dO09", "Gracias");
+        EntradaTexto entrada03 = new EntradaTexto("Marta", "Esta lloviendo ahi fuera...");
+        EntradaFoto entrada04 = new EntradaFoto("Cristina", "https://bit.ly/3cY9vtD", "Una foto de mi nevera");
+
+        muro.addEntradaTexto(entrada01);
+        muro.addEntradaFoto(entrada02);
+        muro.addEntradaTexto(entrada03);
+        muro.addEntradaFoto(entrada04);
+
+        String aComparar = "Usuario: Nacho\n" + "Likes: 0\n" + "Recien llegado de mis vacaciones en Hawaii!\n" + "Escrito hace 10 segundos\n" + "No hay comentarios\n\n\n"
+                         + "Usuario: Marta\n" + "Likes: 0\n" + "Esta lloviendo ahi fuera...\n" +  "Escrito hace 10 segundos\n" + "No hay comentarios\n\n\n"
+                         + "Usuario: Luis\n" + "Likes: 0\n" + "Url: https://bit.ly/2W1dO09\n" + "Titulo: Gracias\n" +  "Escrito hace 10 segundos\n" + "No hay comentarios\n\n\n"
+                         + "Usuario: Cristina\n" + "Likes: 0\n" + "Url: https://bit.ly/3cY9vtD\n" + "Titulo: Una foto de mi nevera\n" +  "Escrito hace 10 segundos\n" + "No hay comentarios\n\n\n";
+        assertEquals(aComparar, muro.toString());
+    }
+
 }

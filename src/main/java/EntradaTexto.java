@@ -39,6 +39,13 @@ public class EntradaTexto extends Entrada
     }
 
     /**
+     * Muestra el nombre del Autor y su mensaje.
+     */
+    public void mostrarAutorYMensaje() {
+        System.out.println("Autor: " + getUsuario() + "\n" + "Mensaje: " + mensaje + "\n");
+    }
+
+    /**
      * Devuelve una cadena con toda la informacion de la entrada.
      * @return Devuelve una cadena con toda la informacion de la entrada.
      */

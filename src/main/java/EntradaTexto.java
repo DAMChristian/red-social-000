@@ -55,19 +55,7 @@ public class EntradaTexto extends EntradaComentarios
         aDevolver += "Usuario: " + getUsuario() + "\n";
         aDevolver += "Likes: " + getCantidadMeGusta() + "\n";
         aDevolver += mensaje + "\n";
-
-        // Calculamos el numero de segundos que han pasado desde la fecha de publicacion.
-        //long numeroSegundos = momentoPublicacion.until(LocalDateTime.now(), ChronoUnit.SECONDS);
-        aDevolver += "Escrito hace 10 segundos";
-
-        // Comprobamos si debemos expresar el tiempo en segundos o minutos.
-        //if(numeroSegundos > 59){
-        //   aDevolver += numeroSegundos / 60 + " minutos";
-        //}
-        //else {
-        //    aDevolver += numeroSegundos + " segundos";
-        //}
-        aDevolver += "\n";
+        aDevolver += getTiempoDeVidaDeLaPublicacion() + "\n";
 
         // Comprobamos si hay comentarios. Si hay los mostramos, si no, mostramos un mensaje indicandolo.
         if (getComentarios().size() == 0)         {

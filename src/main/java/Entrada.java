@@ -23,6 +23,23 @@ public class Entrada {
         return momentoPublicacion;
     }
 
+    public String getTiempoDeVidaDeLaPublicacion() {
+        String aDevolver = "Escrito hace 10 segundos";
+        // Calculamos el numero de segundos que han pasado desde la fecha de publicacion.
+        //long numeroSegundos = momentoPublicacion.until(LocalDateTime.now(), ChronoUnit.SECONDS);
+        //aDevolver += "Escrito hace ";
+
+        // Comprobamos si debemos expresar el tiempo en segundos o minutos.
+        //if(numeroSegundos > 59){
+        //   aDevolver += numeroSegundos / 60 + " minutos";
+        //}
+        //else {
+        //    aDevolver += numeroSegundos + " segundos";
+        //}
+
+        return aDevolver;
+    }
+
     public String getUsuario() {
         return usuario;
     }

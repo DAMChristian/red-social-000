@@ -12,7 +12,7 @@ import java.time.temporal.ChronoUnit;
  *  @author DAM
  *  @version 1.0
  */
-public class EntradaFoto extends Entrada
+public class EntradaFoto extends EntradaComentarios
 {
 
     // URL de la imagen.

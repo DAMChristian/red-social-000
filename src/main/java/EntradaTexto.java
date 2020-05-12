@@ -12,7 +12,7 @@ import java.time.temporal.ChronoUnit;
  *  @version 1.0
  */
 
-public class EntradaTexto extends Entrada
+public class EntradaTexto extends EntradaComentarios
 {
 
     // Contenido de la entrada.

@@ -20,6 +20,7 @@ public class MuroTest {
         EntradaFoto entrada04 = new EntradaFoto("Cristina", "https://bit.ly/3cY9vtD", "Una foto de mi nevera");
         EntradaEvento entrada05 = new EntradaEvento("Miguel", "Ha creado la clase DAM 1");
         EntradaEvento entrada06 = new EntradaEvento("Adrian", "Se ha unido a los foros de linus");
+        entrada03.addComentario("Me encanta la lluvia.");
 
         muro.addEntradaTexto(entrada01);
         muro.addEntradaFoto(entrada02);
@@ -28,12 +29,12 @@ public class MuroTest {
         muro.addEntradaEvento(entrada05);
         muro.addEntradaEvento(entrada06);
 
-        String aComparar = "Usuario: Nacho\n" + "Likes: 0\n" + "Recien llegado de mis vacaciones en Hawaii!\n" + "Escrito hace 10 segundos\n" + "No hay comentarios\n\n\n"
-                         + "Usuario: Marta\n" + "Likes: 0\n" + "Esta lloviendo ahi fuera...\n" +  "Escrito hace 10 segundos\n" + "No hay comentarios\n\n\n"
-                         + "Usuario: Luis\n" + "Likes: 0\n" + "Url: https://bit.ly/2W1dO09\n" + "Titulo: Gracias\n" +  "Escrito hace 10 segundos\n" + "No hay comentarios\n\n\n"
-                         + "Usuario: Cristina\n" + "Likes: 0\n" + "Url: https://bit.ly/3cY9vtD\n" + "Titulo: Una foto de mi nevera\n" +  "Escrito hace 10 segundos\n" + "No hay comentarios\n\n\n"
-                         + "Usuario: Miguel\n" + "Likes: 0\n" + "Ha creado la clase DAM 1\n" + "Escrito hace 10 segundos\n\n\n"
-                         + "Usuario: Adrian\n" + "Likes: 0\n" + "Se ha unido a los foros de linus\n" + "Escrito hace 10 segundos\n\n\n";
+        String aComparar = "Usuario: Nacho\n" + "Likes: 0\n"  + "Escrito hace 10 segundos\n" + "No hay comentarios\n" + "Recien llegado de mis vacaciones en Hawaii!\n\n\n"
+                         + "Usuario: Marta\n" + "Likes: 0\n" +  "Escrito hace 10 segundos\n" + "Comentarios - Me encanta la lluvia.\n" + "Esta lloviendo ahi fuera...\n\n\n"
+                         + "Usuario: Luis\n" + "Likes: 0\n" +  "Escrito hace 10 segundos\n" + "No hay comentarios\n" + "Url: https://bit.ly/2W1dO09\n" + "Titulo: Gracias\n\n\n"
+                         + "Usuario: Cristina\n" + "Likes: 0\n" +  "Escrito hace 10 segundos\n" + "No hay comentarios\n" + "Url: https://bit.ly/3cY9vtD\n" + "Titulo: Una foto de mi nevera\n\n\n"
+                         + "Usuario: Miguel\n" + "Likes: 0\n" + "Escrito hace 10 segundos\n" + "Ha creado la clase DAM 1\n\n\n"
+                         + "Usuario: Adrian\n" + "Likes: 0\n" + "Escrito hace 10 segundos\n" + "Se ha unido a los foros de linus\n\n\n";
         assertEquals(aComparar, muro.toString());
     }
 

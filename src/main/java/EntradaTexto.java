@@ -51,23 +51,8 @@ public class EntradaTexto extends EntradaComentarios
      */
     @Override
     public String toString() {
-        String aDevolver = "";
-        aDevolver += "Usuario: " + getUsuario() + "\n";
-        aDevolver += "Likes: " + getCantidadMeGusta() + "\n";
+        String aDevolver = super.toString();
         aDevolver += mensaje + "\n";
-        aDevolver += getTiempoDeVidaDeLaPublicacion() + "\n";
-
-        // Comprobamos si hay comentarios. Si hay los mostramos, si no, mostramos un mensaje indicandolo.
-        if (getComentarios().size() == 0)         {
-            aDevolver += "No hay comentarios\n";
-        }
-        else {
-            aDevolver += "Comentarios: \n";
-            for(String comentarioActual : getComentarios()){
-                aDevolver += comentarioActual + "\n";
-            }
-        }
-
         return aDevolver;
     }
 }

@@ -20,4 +20,19 @@ public class EntradaComentarios extends Entrada {
         return comentarios;
     }
 
+    @Override
+    public String toString() {
+        String aDevolver = "";
+        aDevolver = super.toString();
+        if (!comentarios.isEmpty()) {
+            aDevolver += "Comentarios - ";
+            for (String texto : comentarios) {
+                aDevolver += texto + "\n";
+            }
+        }
+        else {
+            aDevolver += "No hay comentarios\n";
+        }
+        return aDevolver;
+    }
 }

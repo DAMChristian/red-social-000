@@ -11,46 +11,27 @@ import java.util.ArrayList;
 public class Muro
 {
     // Entradas de texto
-    private ArrayList <EntradaTexto> mensajes;
-    // Entradas con imagenes
-    private ArrayList <EntradaFoto> fotos;
-    // Entradas con eventos
-    private ArrayList <EntradaEvento> eventos;
+    private ArrayList <Entrada> entrada;
 
     /**
      * Constructor - Construye e inicializa un muro vacio.
      */
     public Muro() {
         //Inicializa mensajes y fotos.
-        mensajes = new ArrayList<>();
-        fotos = new ArrayList<>();
-        eventos = new ArrayList<>();
-    }
-
-    /**
-     * Anade una entrada de texto al muro.
-     * @param entrada La entrada de texto a anadir.
-     */
-    public void addEntradaTexto(EntradaTexto entrada) {
-        mensajes.add(entrada);
-    }
-
-    /**
-     * Anade una entrada de imagen al muro.
-     * @param entradaFoto La entrada de imagen a anadir.
-     */
-    public void addEntradaFoto(EntradaFoto entradaFoto) {
-        fotos.add(entradaFoto);
+        entrada = new ArrayList<>();
     }
 
     /**
      * Anade una entrada de evento al muro.
-     * @param entradaEvento La entrada de evento a anadir.
+     * @param entrada La entrada de evento a anadir.
      */
-    public void addEntradaEvento(EntradaEvento entradaEvento) {
-        eventos.add(entradaEvento);
+    public void addEntrada(Entrada entrada) {
+        this.entrada.add(entrada);
     }
 
+    public void mostrarDetallesTodasLasEntradas() {
+
+    }
     /**
      * Devuelve una cadena con toda la informacion del muro.
      * @return Devuelve una cadena con toda la informacion del muro.
@@ -60,17 +41,7 @@ public class Muro
         String aDevolver = "";
 
         // Buscamos todas las entradas de texto.
-        for (EntradaTexto entrada : mensajes) {
-            aDevolver += entrada + "\n\n";
-        }
-
-        // Buscamos todas las entradas con foto.
-        for (EntradaFoto entrada : fotos) {
-            aDevolver += entrada + "\n\n";
-        }
-
-        // Buscamos todas las entradas con evento.
-        for (EntradaEvento entrada : eventos) {
+        for (Entrada entrada : this.entrada) {
             aDevolver += entrada + "\n\n";
         }
 

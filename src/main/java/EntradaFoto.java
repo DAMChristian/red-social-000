@@ -51,6 +51,12 @@ public class EntradaFoto extends EntradaComentarios
         return titulo;
     }
 
+    @Override
+    public void mostrarDetallesPorPantalla() {
+        System.out.println(urlImagen);
+        System.out.println(titulo);
+    }
+
     /**
      * Devuelve una cadena con toda la informacion de la entrada.
      * @return Devuelve una cadena con toda la informacion de la entrada.

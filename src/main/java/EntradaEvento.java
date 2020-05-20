@@ -12,6 +12,11 @@ public class EntradaEvento extends Entrada {
     }
 
     @Override
+    public void mostrarDetallesPorPantalla() {
+        System.out.println(evento);
+    }
+
+    @Override
     public String toString() {
         String aDevolver = super.toString();
         aDevolver += evento + "\n";

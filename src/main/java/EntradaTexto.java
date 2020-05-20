@@ -44,6 +44,10 @@ public class EntradaTexto extends EntradaComentarios
     public void mostrarAutorYMensaje() {
         System.out.println("Autor: " + getUsuario() + "\n" + "Mensaje: " + mensaje + "\n");
     }
+    @Override
+    public void mostrarDetallesPorPantalla() {
+        System.out.println(mensaje);
+    }
 
     /**
      * Devuelve una cadena con toda la informacion de la entrada.

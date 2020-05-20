@@ -30,7 +30,9 @@ public class Muro
     }
 
     public void mostrarDetallesTodasLasEntradas() {
-
+        for (Entrada entrada : this.entrada) {
+            entrada.mostrarDetallesPorPantalla();
+        }
     }
     /**
      * Devuelve una cadena con toda la informacion del muro.

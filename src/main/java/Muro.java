@@ -34,6 +34,28 @@ public class Muro
             entrada.mostrarDetallesPorPantalla();
         }
     }
+
+    public String[] getUrlsFotos() {
+        int contador = 0;
+        for (Entrada entrada: this.entrada) {
+            if (entrada instanceof EntradaFoto) {
+                contador++;
+            }
+        }
+        String[] urls = new String[contador];
+        int contador2 = 0;
+        for (Entrada entrada: this.entrada) {
+            if (entrada instanceof EntradaFoto) {
+                EntradaFoto entradaF = (EntradaFoto)entrada;
+                urls[contador2] = entradaF.getUrlImagen();
+                contador2++;
+            }
+        }
+        return urls;
+    }
+
+
+
     /**
      * Devuelve una cadena con toda la informacion del muro.
      * @return Devuelve una cadena con toda la informacion del muro.
